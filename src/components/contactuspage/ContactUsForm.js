@@ -25,12 +25,12 @@ export const ContactUsForm = () => {
 
   return (
     // <div>ContactUsForm</div>
-    <div className="bg-white rounded-lg shadow-lg w-96">
-      <div className=" bg-gray-600 h-12 flex items-center justify-center">
-        <h2 className="text-2xl text-white">Send Us Enquiry</h2>
+    <div className="bg-white rounded-lg shadow-lg w-[35%]">
+      <div className=" bg-gray-600 h-20 flex items-center justify-center">
+        <h2 className="text-[24px] text-white font-normal">Send Us Enquiry</h2>
       </div>
 
-      <div className="mx-4">
+      <div className="mx-4 my-4">
         <label
           htmlFor="name"
           className="block text-sm font-medium text-gray-700"
@@ -40,6 +40,7 @@ export const ContactUsForm = () => {
         <input
           type="text"
           name="name"
+          autoComplete="off"
           value={formData.name}
           onChange={handleChange}
           required
@@ -47,7 +48,7 @@ export const ContactUsForm = () => {
         />
       </div>
 
-      <div className="mx-4">
+      <div className="mx-4 my-4">
         <label
           htmlFor="email"
           className="block text-sm font-medium text-gray-700"
@@ -59,12 +60,13 @@ export const ContactUsForm = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
+          autoComplete="off"
           required
           className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500"
         />
       </div>
 
-      <div className="mx-4">
+      <div className="mx-4 my-4">
         <label
           htmlFor="phone"
           className="block text-sm font-medium text-gray-700"
@@ -74,6 +76,7 @@ export const ContactUsForm = () => {
         <input
           type="tel"
           name="phone"
+          autoComplete="off"
           value={formData.phone}
           onChange={handleChange}
           required
@@ -81,7 +84,7 @@ export const ContactUsForm = () => {
         />
       </div>
 
-      <div className="mx-4">
+      <div className="mx-4 my-4">
         <label
           htmlFor="subject"
           className="block text-sm font-medium text-gray-700"
@@ -91,6 +94,7 @@ export const ContactUsForm = () => {
         <input
           type="text"
           name="subject"
+          autoComplete="off"
           value={formData.subject}
           onChange={handleChange}
           required
@@ -98,7 +102,7 @@ export const ContactUsForm = () => {
         />
       </div>
 
-      <div className="mx-4">
+      <div className="mx-4 my-4">
         <label
           htmlFor="message"
           className="block text-sm font-medium text-gray-700"
