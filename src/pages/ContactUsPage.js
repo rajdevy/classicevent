@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { ContactUsForm } from '../components/contactuspage/ContactUsForm';
 
-export const ContactUsPage = () => {
-  return (
-    <div></div>
-  )
-}
+const ContactUsPage = () => {
+  return <div className='bg-green-200 p-20'> 
+  <ContactUsForm/>
+  </div>;
+};
+
+export default ContactUsPage;
