@@ -1,23 +1,26 @@
 import React from 'react';
-import { BrowserRouter as AppRouter, Route, Routes } from 'react-router-dom'; // Alias 'BrowserRouter' as 'AppRouter'
+import { Route, Routes } from 'react-router-dom'; // Only import Route and Routes
 import Loadable from '../layouts/Loadable'; // Custom Loadable component
 
-// Lazy load components using Loadable and React.lazy
-const Home = Loadable(React.lazy(() => import('../pages/Home'))); // Corrected path
+const Home = Loadable(React.lazy(() => import('../pages/Home')));
+const Category = Loadable(React.lazy(() => import('../pages/Category')));
 const About = Loadable(React.lazy(() => import('../pages/AboutUs')));
 const Contact = Loadable(React.lazy(() => import('../pages/ContactUsPage')));
+const PrivacyPolicy = Loadable(React.lazy(() => import('../pages/PrivacyPolicy')));
+const TermsConditions = Loadable(React.lazy(() => import('../pages/TermsConditions')));
 const NotFound = Loadable(React.lazy(() => import('../pages/NotFound')));
 
 const Router = () => {
   return (
-    <AppRouter>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </AppRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/category" element={<Category />} />
+      <Route path="/about-us" element={<About />} />
+      <Route path="/contact-us" element={<Contact />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-conditions" element={<TermsConditions />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 };
 
