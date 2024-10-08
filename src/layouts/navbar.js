@@ -21,7 +21,7 @@ const Navbar = () => {
             className="h-12 w-12"
           />
           <div className="leading-tight">
-            <h1 className="text-2xl  text-white italic">Classic Event</h1>
+            <h1 className="text-2xl  text-white italic" >Classic Event</h1>
             <p className="text-sm">Making your Day Memorable....</p>
           </div>
         </div>
