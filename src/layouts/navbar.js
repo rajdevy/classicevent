@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';  // Import Link from react-router-dom
+import logo from '../assets/images/Logo.jpg'
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("Home");
@@ -10,15 +11,15 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-[100vw] shadow-md">
+    <header className=" h-[15vh] shadow-md">
       {/* Top Logo and Search Bar Section */}
       <div className="bg-black text-white py-2 px-4 md:px-10 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 ">
           <img
-            src="https://via.placeholder.com/50" // Replace with your logo
+            src={logo} // Replace with your logo
             alt="Logo"
-            className="h-12 w-12"
+            className="h-12 w-12 rounded-full"
           />
           <div className="leading-tight">
             <h1 className="text-2xl  text-white italic" >Classic Event</h1>
