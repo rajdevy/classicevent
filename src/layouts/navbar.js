@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import logo from '../assets/images/Logo.jpg'
-
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("Home");
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -56,7 +56,7 @@ const Navbar = () => {
         {/* Cart and Profile Icons */}
         <div className="flex items-center space-x-4 text-white ">
           {/* Cart */}
-          <div className="relative">
+          {/* <div className="relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -74,9 +74,10 @@ const Navbar = () => {
             <span className="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full h-4 w-4 flex items-center justify-center">
               0
             </span>
-          </div>
+          </div> */}
           {/* Profile */}
-          <svg
+          <AccountCircleIcon/>
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
             fill="none"
@@ -89,7 +90,7 @@ const Navbar = () => {
               strokeWidth={2}
               d="M5.121 18.364A9 9 0 1118.364 5.121 9 9 0 015.121 18.364zM15 11a3 3 0 11-6 0 3 3 0 016 0z"
             />
-          </svg>
+          </svg> */}
         </div>
       </div>
 
