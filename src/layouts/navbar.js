@@ -11,19 +11,20 @@ const Navbar = () => {
   };
 
   return (
-    <header className=" h-[15vh] shadow-md">
+    <header className=" h-[17vh] shadow-md">
       {/* Top Logo and Search Bar Section */}
-      <div className="bg-black text-white py-2 px-4 md:px-10 flex justify-between items-center">
+      <div className="bg-[#9c27b0] text-white py-2 drop-shadow-lg px-4 md:px-10 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-2 ">
           <img
             src={logo} // Replace with your logo
             alt="Logo"
-            className="h-12 w-12 rounded-full"
+            className="h-12 w-12 rounded-full shadow-md shadow-black"
           />
+          <div className='h-12 w-[2px] bg-white rounded-md'></div>
           <div className="leading-tight">
-            <h1 className="text-2xl  text-white italic" >Classic Event</h1>
-            <p className="text-sm">Making your Day Memorable....</p>
+            <h1 className="text-3xl font-semibold  italic " style={{ fontFamily: 'Playfair Display' }} >Classic Event</h1>
+            <p className="text-xs italic">Classic Touches for Modern Celebrations...</p>
           </div>
         </div>
 
@@ -53,7 +54,7 @@ const Navbar = () => {
         </div>
 
         {/* Cart and Profile Icons */}
-        <div className="flex items-center space-x-4 text-white">
+        <div className="flex items-center space-x-4 text-white ">
           {/* Cart */}
           <div className="relative">
             <svg
@@ -93,7 +94,7 @@ const Navbar = () => {
       </div>
 
       {/* Navigation Links Section */}
-      <nav className="shadow-sm md:flex justify-start">
+      <nav className="shadow-sm md:flex justify-start border-y-2 border-[#9c27b0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Menu Links */}

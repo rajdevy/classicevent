@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'; // Only import Route and Route
 import Loadable from '../layouts/Loadable'; // Custom Loadable component
 
 const Home = Loadable(React.lazy(() => import('../pages/Home')));
-const Category = Loadable(React.lazy(() => import('../pages/Category')));
+const Category = Loadable(React.lazy(() => import('../pages/Categories')));
 const About = Loadable(React.lazy(() => import('../pages/AboutUs')));
 const Contact = Loadable(React.lazy(() => import('../pages/ContactUsPage')));
 const PrivacyPolicy = Loadable(React.lazy(() => import('../pages/PrivacyPolicy')));

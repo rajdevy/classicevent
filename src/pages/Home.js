@@ -2,10 +2,13 @@ import CelebrationIcon from '@mui/icons-material/Celebration';
 import BgVideo from '../assets/videos/BackgroundVideo.mp4';
 import React, { useState, useEffect } from 'react';
 import logo from '../assets/images/Logo.jpg'
+import CategoriesCarousel from '../components/categoriespagecomponents/CategoriesCarousel';
+import { categories } from '../utils/CategoriesData';
+import { useNavigate } from 'react-router';
 
 const EventPage = () => {
   const [showHeading, setShowHeading] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     // Function to handle the visibility of the heading
     const toggleVisibility = () => {
@@ -35,7 +38,8 @@ const EventPage = () => {
   }, []);
 
   return (
-    <div className="relative h-[85vh] flex justify-center items-center">
+    <div>
+          <div className="relative h-[83vh] flex justify-center items-center">
       {/* Video background for the main div */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -68,6 +72,28 @@ const EventPage = () => {
         </div>
       </div>
     </div>
+       <CategoriesCarousel/>
+
+       <div className="flex justify-center flex-wrap gap-4 my-20">
+            {categories.map((category) => (
+              <div key={category.name} className="flex flex-col items-center w-40 md:w-52">
+                <button
+                className='relative flex items-center justify-center text-lg w-32 h-32 md:w-36 md:h-36 rounded-full shadow-2xl overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-3xl'
+                  // className={`relative flex items-center justify-center text-lg w-32 h-32 md:w-36 md:h-36 rounded-full shadow-2xl overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-3xl
+                  //   ${selectedCategory === category.name ? 'ring-2 ring-[#9c27b0] scale-105' : 'ring-2 bg-indigo-500'}`}
+                  onClick={() => navigate('/category')}
+                >
+                  <img src={category.image} alt={category.name} className="absolute inset-0 object-cover w-full h-full opacity-80 transition duration-300 ease-in-out" />
+                </button>
+                <span className={`mt-2 text-center text-xl font-semibold italic 'text-black'}`} style={{ fontFamily: 'Playfair Display' }}>
+                  {category.name}
+                </span>
+              </div>
+            ))}
+          </div>
+    </div>
+
+
   );
 };
 
