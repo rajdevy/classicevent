@@ -112,6 +112,7 @@ const Navbar = () => {
                     >
                       {link}
                     </Link>
+                    {/*  */}
                     {activeLink === link && (
                       <div className="h-1 w-full bg-red-500 rounded-full mt-1">
                         <div className="w-2 h-2 bg-red-500 rounded-full mx-auto mt-1"></div>
